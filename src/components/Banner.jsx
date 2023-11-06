@@ -10,7 +10,13 @@ const Banner = () => {
         alt="banner"
       />
       <div className="absolute top-1/2 w-full text-center">
-        <p className="text-sm sm:text-lg">Not sure where to go? Perfect</p>
+        <p className="text-sm sm:text-lg bg-transparent text-white font-bold">
+          Not sure where to go? Perfect
+        </p>
+        <button className="text-purple-500 bg-white px-10 py-4 shadow-md hover:shadow-2xl  rounded-full font-bold my-3 active:scale-90 transition duration-150">
+          {' '}
+          I&apos;m Flexible
+        </button>
       </div>
     </div>
   );
