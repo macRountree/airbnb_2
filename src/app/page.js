@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer';
 import { destinos } from '../data/dest';
 import { vive } from '../data/vive';
 import Banner from '@/components/Banner';
@@ -39,6 +40,7 @@ export default function Home() {
           buttonText="Get Inspired"
         />
       </main>
+      <Footer />
     </div>
   );
 }
