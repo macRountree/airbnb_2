@@ -41,7 +41,7 @@ const Header = () => {
           className="flex-grow pl-5 bg-transparent outline-none text-gray-600 placeholder-gray-400
           "
           type="text"
-          name=""
+          name="search"
           id=""
           placeholder="Start your search"
         />
@@ -128,10 +128,10 @@ const Header = () => {
             />
           </div>
           <div className="flex ">
-            <button className="flex-grow text-gray-600 cursor-pointer hover:bg-gray-600 hover:text-white  rounded-xl hover:scale-105 transition transform duration-200 ease-out">
+            <button className="flex-grow text-gray-600 cursor-pointer hover:bg-gray-400 hover:text-white  rounded-xl hover:scale-105 transition transform duration-300 ease-linear">
               Cancel
             </button>
-            <button className="flex-grow text-red-400 hover:bg-red-400 hover:text-white cursor-pointer rounded-lg hover:scale-105 transition transform duration-200 ease-out">
+            <button className="flex-grow text-red-400 hover:bg-red-400 hover:text-white cursor-pointer rounded-lg hover:scale-105 transition transform duration-300 ease-out">
               Search
             </button>
           </div>
