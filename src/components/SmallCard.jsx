@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const SmallCard = ({ imagen, distancia, localidad }) => {
-  console.log(imagen);
+  // console.log(imagen);
   return (
     <div
       className="flex items-center m-2 mt-5 space-x-4 rounded-xl cursor-pointer

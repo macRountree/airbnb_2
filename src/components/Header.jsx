@@ -23,8 +23,7 @@ const Header = () => {
     setSearchInput('');
   };
   const handleSearch = () => {
-    const search = pathName;
-    console.log(search);
+    router.push('/search');
   };
   // console.log(handleSearch);
   const selectionRange = {

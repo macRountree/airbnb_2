@@ -1,5 +1,9 @@
+'use client';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import InforCard from '@/components/InforCard';
+import { london } from '@/data/london';
+
 const Search = () => {
   return (
     <div>
@@ -14,6 +18,35 @@ const Search = () => {
             <p className="button">Price</p>
             <p className="button">Rooms and Beds</p>
             <p className="button">More Filters</p>
+          </div>
+          <div className="flex flex-col">
+            {london.map(
+              ({
+                id,
+                image,
+                title,
+                location,
+                distancia,
+                star,
+                price,
+                total,
+                long,
+                lat,
+              }) => (
+                <InforCard
+                  key={id}
+                  image={image}
+                  distancia={distancia}
+                  location={location}
+                  title={title}
+                  star={star}
+                  price={price}
+                  total={total}
+                  long={long}
+                  lat={lat}
+                />
+              )
+            )}
           </div>
         </section>
       </main>
