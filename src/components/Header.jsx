@@ -4,17 +4,29 @@ import { useState } from 'react';
 import 'react-date-range/dist/styles.css'; // main style file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { DateRangePicker } from 'react-date-range';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 const Header = () => {
   const [searchInput, setSearchInput] = useState('');
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [numOfGuests, setNumOfGuest] = useState(1);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  let pathName = usePathname();
+  // console.log(pathName);
   const handleSelect = ranges => {
     setStartDate(ranges.selection.startDate);
     setEndDate(ranges.selection.endDate);
-    console.log(ranges);
   };
+  const resetInput = () => {
+    setSearchInput('');
+  };
+  const handleSearch = () => {
+    const search = pathName;
+    console.log(search);
+  };
+  // console.log(handleSearch);
   const selectionRange = {
     startDate,
     endDate,
@@ -22,7 +34,10 @@ const Header = () => {
   };
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
-      <div className="relative flex items-center h-10 cursor-pointer my-auto">
+      <div
+        onClick={() => router.push('/')}
+        className="relative flex items-center h-10 cursor-pointer my-auto"
+      >
         <Image
           src="https://mibnb.vercel.app/_next/image?url=%2Fimages%2Flogo.png&w=128&q=75"
           layout="fill"
@@ -128,10 +143,17 @@ const Header = () => {
             />
           </div>
           <div className="flex ">
-            <button className="flex-grow text-gray-600 cursor-pointer hover:bg-gray-400 hover:text-white  rounded-xl hover:scale-105 transition transform duration-300 ease-linear">
+            <button
+              onClick={resetInput}
+              className="flex-grow text-gray-600 cursor-pointer hover:bg-gray-400 hover:text-white  rounded-xl hover:scale-105 transition transform duration-300 ease-linear"
+            >
               Cancel
             </button>
-            <button className="flex-grow text-red-400 hover:bg-red-400 hover:text-white cursor-pointer rounded-lg hover:scale-105 transition transform duration-300 ease-out">
+            <button
+              type="button"
+              className="flex-grow text-red-400 hover:bg-red-400 hover:text-white cursor-pointer rounded-lg hover:scale-105 transition transform duration-300 ease-out"
+              onClick={handleSearch}
+            >
               Search
             </button>
           </div>
