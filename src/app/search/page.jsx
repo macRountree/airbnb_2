@@ -27,6 +27,7 @@ const Search = () => {
                 title,
                 location,
                 distancia,
+                description,
                 star,
                 price,
                 total,
@@ -37,6 +38,7 @@ const Search = () => {
                   key={id}
                   image={image}
                   distancia={distancia}
+                  description={description}
                   location={location}
                   title={title}
                   star={star}
