@@ -2,8 +2,8 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import InforCard from '@/components/InforCard';
+import MapBox from '@/components/MapBox';
 import { london } from '@/data/london';
-
 const Search = () => {
   return (
     <div>
@@ -50,6 +50,9 @@ const Search = () => {
               )
             )}
           </div>
+        </section>
+        <section className="min-w-[600px] ">
+          <MapBox />
         </section>
       </main>
       <Footer />
