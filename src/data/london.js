@@ -23,8 +23,8 @@ const london = [
     star: 4.95,
     price: '$ 40 / night',
     total: '$180 total',
-    longitude: -70.2066864,
-    latitude: 44.1025423,
+    longitude: -0.12574,
+    latitude: 51.50853,
     id: 2,
   },
   {
