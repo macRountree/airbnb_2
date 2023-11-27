@@ -9,8 +9,8 @@ const london = [
     star: 4.73,
     price: '$ 30 / night',
     total: '$157 total',
-    longitude: -0.0898,
-    latitude: 51.8491,
+    longitude: -0.12574,
+    latitude: 51.50853,
     id: 1,
   },
   {
@@ -23,8 +23,8 @@ const london = [
     star: 4.95,
     price: '$ 40 / night',
     total: '$180 total',
-    longitude: 0.1269,
-    latitude: 51.522,
+    longitude: -70.2066864,
+    latitude: 44.1025423,
     id: 2,
   },
   {
@@ -37,8 +37,8 @@ const london = [
     star: 4.88,
     price: '$ 50 / night',
     total: '$220 total',
-    longitude: -0.0915,
-    latitude: 51.6001,
+    longitude: -0.1386848,
+    latitude: 51.4964948,
     id: 3,
   },
   {
@@ -51,8 +51,8 @@ const london = [
     star: 4.65,
     price: '$ 35 / night',
     total: '$160 total',
-    longitude: -0.0951,
-    latitude: 51.52,
+    longitude: -0.0870542,
+    latitude: 51.5245327,
     id: 4,
   },
 ];

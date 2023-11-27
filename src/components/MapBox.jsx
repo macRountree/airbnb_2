@@ -2,6 +2,7 @@ import { london } from '@/data/london';
 import { getCenter } from 'geolib';
 import { useState } from 'react';
 import Map, { Marker, Popup } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 const MapBox = () => {
   const [selectedLocation, setSelectedLocation] = useState({});
   const coord = london.map(res => ({
@@ -33,12 +34,14 @@ const MapBox = () => {
             latitude={res.latitude}
             offSetLeft={-20}
             offSetTop={-10}
+            anchor="top-left"
+            // style={{ zIndex: 10 }}
           >
             {' '}
             <p
               role="img"
               onClick={() => setSelectedLocation(res)}
-              className="cursor-pointer text-2xl animate-bounce"
+              className="cursor-pointer text-2xl animate-bounce relative"
               aria-label="push-pin"
             >
               <svg
@@ -47,7 +50,7 @@ const MapBox = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6 stroke-orange-400"
+                className="w-6 h-6 stroke-orange-400 absolute"
               >
                 <path
                   strokeLinecap="round"
