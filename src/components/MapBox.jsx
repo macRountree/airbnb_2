@@ -3,15 +3,18 @@ import { getCenter } from 'geolib';
 import { useState } from 'react';
 import Map from 'react-map-gl';
 const MapBox = () => {
-  const coord = london.map(res => ({ long: res.long, lat: res.lat }));
+  const coord = london.map(res => ({
+    longitude: res.longitude,
+    latitude: res.latitude,
+  }));
   console.log(coord);
   const center = getCenter(coord);
   console.log(center);
   const [viewport, setViewport] = useState({
     width: '100%',
     height: '100%',
-    lat: center.lat,
-    long: center.long,
+    latitude: center.latitude,
+    longitude: center.longitude,
     zoom: 11,
   });
   return (
