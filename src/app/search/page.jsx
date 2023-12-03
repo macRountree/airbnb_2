@@ -51,7 +51,7 @@ const Search = () => {
             )}
           </div>
         </section>
-        <section className="min-w-[600px]  ">
+        <section className="xl:min-w-[600px]  ">
           <MapBox />
         </section>
       </main>

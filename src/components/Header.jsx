@@ -57,7 +57,7 @@ const Header = () => {
           type="text"
           name="search"
           id=""
-          placeholder="Start your search (only typing London"
+          placeholder="Start your search"
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"
